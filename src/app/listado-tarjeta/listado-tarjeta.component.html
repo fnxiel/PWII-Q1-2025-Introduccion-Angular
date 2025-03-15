@@ -1,0 +1,14 @@
+<div>
+    <h1>{{titulo}}</h1>
+    <div *ngIf="tarjetas.length <= 0">
+        No hay servicios para mostrar
+    </div>
+    <div *ngIf="tarjetas.length > 0">
+        <app-tarjeta-servicios *ngFor="let tarjeta of tarjetas" 
+        [texto]="tarjeta.texto" 
+        [icono]="tarjeta.icono"
+        [href]="tarjeta.href"
+        ></app-tarjeta-servicios>
+    </div>
+</div>
+

@@ -3,4 +3,13 @@
     <p>{{descripcion}}</p>
     <hr>
     <p>enlace: <a href={{enlace.href}}>{{enlace.texto}}</a></p>
+    <div>
+        <p>Visitado: {{contador}} veces</p>
+        <button (click)="contar()">Aumentar conteo</button>
+    </div>
+    <div>
+        <p>Seguidores: {{seguidores}}</p>
+        <button (click)="contarSeguidores('Seguir')">Seguir</button>
+        <button (click)="contarSeguidores('Dejar de Seguir')">Dejar de seguir</button>
+    </div>
 </div>
